@@ -1,0 +1,11 @@
+.errorContainer{
+    margin: 50px auto;
+    width: 90%;
+    color: #f8c93c;
+    text-align: center;
+}
+
+.errorContainer img{
+    width: 40%;
+   
+}

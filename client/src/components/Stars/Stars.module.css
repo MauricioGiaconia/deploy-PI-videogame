@@ -1,0 +1,9 @@
+.star{
+    color: #070617;
+    font-size: 3.5em;
+    padding: 5px;
+}
+
+.starSelected{
+    color: #f8c93c !important;
+}

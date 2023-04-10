@@ -1,0 +1,21 @@
+.chckContainer{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    max-width: 550px;
+}
+
+.chckContainer li {
+    box-sizing: border-box;
+    flex-basis: 33.33%; /* Ancho del elemento */
+    padding: 0 10px;
+   
+}
+
+.chckContainer label{
+    font-size: 0.75em !important;
+    float: left;
+}

@@ -1,0 +1,38 @@
+.newsContainer{
+    width: 33.33%;
+    border: 1px black solid;
+    float: left;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.newsContainer h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+.newsContainer p {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+.newsContainer hr{
+    background-color: #070617;
+    padding: 2px;
+    border: 0;
+    border-radius: 25px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+@media (max-width: 1000px) {
+  .newsContainer{
+    width: 95%;
+    margin: 5px auto;
+    float: none;
+  }
+}

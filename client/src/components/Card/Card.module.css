@@ -1,0 +1,81 @@
+.card {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    position: relative;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+.card h2 {
+    font-size: 1.4em;
+    margin: 10px 0 5px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.card ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.card p:last-child {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.cardButtons {
+    padding: 10px;
+}
+
+.btnMore {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btnMore:hover {
+    background-color: #000;
+    color: #f8c93c;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.btnMore:active {
+    transform: translateY(1px);
+}
