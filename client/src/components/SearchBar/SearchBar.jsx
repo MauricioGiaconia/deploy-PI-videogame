@@ -10,7 +10,7 @@ export default function SearchBar(props){
         <input onChange={(e) =>{props.onSearch(e.target.value)}} type="search" name="searchGame"/>  
 
         <select onChange={(e) => {props.onOrder(e.target.value)}} name="orderGames">
-            <option value='false'>-- ORDEN --</option>
+            <option value='origin'>-- ORDEN --</option>
             <option value="DESC">A-Z</option>
             <option value="ASC">Z-A</option>
             <option value="HIGH">Mas valorado</option> 
@@ -18,7 +18,7 @@ export default function SearchBar(props){
         </select> 
         
         <select onChange={(e) => {props.onFilter(e.target.value)}} name="selectGenre">
-            <option value="false">-- FILTRAR --</option>
+            <option value="all">-- TODOS --</option>
             {genres.map((genre) => <option key={genre.id} value={genre.name}>{genre.name}</option>)}
             <option value='db'>Database</option>
             <option value='api'>API</option>

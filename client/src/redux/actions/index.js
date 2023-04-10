@@ -128,10 +128,19 @@ export const searchByName = (dispatch, name) => {
 }
 
 export const sortByOrder = (dispatch, order) =>{
+
+    if (order === 'origin'){
+        return dispatch({type: RESET_GAMES, payload: null});
+    }
+
     return dispatch({type: SORT_ORDER, payload: order});
 }
 
 export const filterGames = (dispatch, value) => {
-  
+    
+    if (value === 'all'){
+        return dispatch({type: RESET_GAMES, payload: null});
+    }
+
     return dispatch({type: FILTER_GAMES, payload: value});
 }
