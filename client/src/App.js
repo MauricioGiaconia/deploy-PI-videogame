@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGenres } from './redux/actions';
 import axios from 'axios';  
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-pi-videogame-production.up.railway.app/';
 
 function App() {
   const genres = useSelector(state => state.genres);
