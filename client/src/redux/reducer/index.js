@@ -39,6 +39,7 @@ const rootReducer = (state = initialState, {type, payload}) => {
         case SET_ERROR:
             return {...state, error: {error: payload.error, message: payload.message}};
         case SEARCH_NAME:
+            state.games = state.auxGames;
             return {...state, games: state.games.filter(game => game.name.toLowerCase().includes(payload.toLowerCase()))}
         case SORT_ORDER:
             if (payload === 'ASC'){
