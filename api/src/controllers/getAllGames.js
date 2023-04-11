@@ -6,15 +6,16 @@ const {API_KEY} = process.env;
 
 const getAllGames = async(req, res) => {
 
+    const pageSize = 35;
     let allGames = [];
 
     try{
 
         
-        for (let i = 1; i <= 5; i++){
+        for (let i = 1; i <= 3; i++){
         
             
-            const response = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}`)  
+            const response = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}&pageSize=${pageSize}`);  
                 
                 
             allGames = [...allGames, ...response.data.results];
