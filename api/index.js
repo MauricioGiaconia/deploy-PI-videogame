@@ -25,7 +25,7 @@ const { pushAllGenres, pushAllPlatforms, pushAllStores, pushAllDevelopers } = re
 
 // Syncing all the models at once.
 // ACORDARSE DE PONER EL FORCE EN FALSE ASI NO SE REINICIA CADA VEZ QUE EL SV SE RESETEA
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
     pushAllGenres();
     pushAllPlatforms();
