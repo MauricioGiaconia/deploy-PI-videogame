@@ -74,9 +74,10 @@ export default function Cards(props){
     }
 
     const onFilterHandler = (value) => {
-        if (value !== 'false'){
-            filterGames(dispatch, value);
-        }
+       
+        setNumPage(1);
+        filterGames(dispatch, value);
+        
         
     }
 
