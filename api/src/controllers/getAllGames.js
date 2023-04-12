@@ -6,6 +6,7 @@ const {API_KEY} = process.env;
 
 const getAllGames = async(req, res) => {
 
+    
     const pageSize = 35;
     let allGames = [];
 
@@ -19,6 +20,8 @@ const getAllGames = async(req, res) => {
                 
                 
             allGames = [...allGames, ...response.data.results];
+
+            allGames = allGames.slice(0, 100);
         
         }
 
@@ -34,6 +37,8 @@ const getAllGames = async(req, res) => {
         let imgData = '';
 1
         for (const game of dbResponse){
+           
+         
             imgBase64 = game.img.toString('base64');
             const buffer = Buffer.from(imgBase64, 'base64');
             imgData = `${buffer}`

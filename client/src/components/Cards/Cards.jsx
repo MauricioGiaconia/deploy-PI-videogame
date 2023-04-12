@@ -13,19 +13,20 @@ export default function Cards(props){
     const games = useSelector((state) => state.games);
     const gamesPerPage = 15;
     const [isLoading, setIsLoading] = useState(true);
-    const [firstLoading, setFirstLoading] = useState(true);
     const [numPage, setNumPage] = useState(1);
     const [gamesToShow, setGamesToShow] = useState([]);
  
     const totalGames = Math.ceil(games.length / gamesPerPage);
+    //Cada vez que entro a la pagina de juegos, limpio el array global del juego traido por ID
     cleanGame(dispatch);
 
+    //En la primera carga de la pagina, traigo todos los juegos
     useEffect(() => {
         
-        if (firstLoading){
+        if (games.length === 0){
 
             dispatch(getGames())
-            .finally(() => { setFirstLoading(false)});
+            .finally(() => { setIsLoading(false)});
            
             
 
@@ -33,7 +34,7 @@ export default function Cards(props){
             const indexLastGame = numPage * gamesPerPage;
             const indexFirstGame = indexLastGame - gamesPerPage;
             setGamesToShow(games.slice(indexFirstGame, indexLastGame));
-            setIsLoading(false);
+         
         }
         
      
@@ -54,8 +55,8 @@ export default function Cards(props){
                     id = {game.id}
                     title = {game.name}
                     rating = {game.rating}
-                    genres = {game.genres}
                     release = {game.released}
+                    genres = {game.genres}
                     img = {game.background_image ? game.background_image : game.img}></Card>
     });
 
@@ -69,7 +70,7 @@ export default function Cards(props){
     }
 
     const onOrderHandler = (order) =>{
-     
+        
         sortByOrder(dispatch, order);
         
     }
