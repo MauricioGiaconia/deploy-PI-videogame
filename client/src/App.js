@@ -16,6 +16,7 @@ function App() {
   const genres = useSelector(state => state.genres);
   const dispatch = useDispatch();
 
+  //Revisar porque traigo todos los generos
   useEffect(() => {
       if (genres.length <= 0){
           dispatch(getGenres());

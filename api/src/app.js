@@ -25,6 +25,8 @@ server.use((req, res, next) => {
 
 server.use('/', routes);
 server.use('/videogames', routes);
+
+//Esto nunca lo uso, revisar
 server.use('/videogames/:page', routes);
 server.use('/videogames/detail', routes);
 server.use('/genres', routes);

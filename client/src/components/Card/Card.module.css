@@ -54,6 +54,11 @@
     text-shadow: 1px 1px 0 #000;
 }
 
+.listGenre{
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
 .cardButtons {
     padding: 10px;
 }

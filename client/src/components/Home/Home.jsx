@@ -15,15 +15,7 @@ export default function Home(props){
                 <div className={`${styles.pcContainer}`}>
                     <img src={headerPC} alt="retro pc" />
                 </div>
-            </div>
-
-            
-
-           
-          
-            
-           
-       
+            </div>       
         </div>
 
         <div className={`${styles.columnas}`}>

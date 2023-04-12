@@ -7,6 +7,7 @@ import Options from '../Options/Options';
 import Stars from '../Stars/Stars.jsx';
 import { getGames } from '../../redux/actions';
 
+//Stars tambien se debe resetear al hacer submit
 
 export default function NewGameForm(props){
 
@@ -71,7 +72,7 @@ export default function NewGameForm(props){
 
         e.preventDefault();
         
-
+        //Ya no reconoce archivos que no sean imagenes
         if (newGame.aditionalImg && !validations.aditionalImg){
             return;
         }
