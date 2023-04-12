@@ -7,7 +7,7 @@ import NewGameForm from './components/NewGameForm/NewGameForm';
 import Detail from './components/Detail/Detail';
 import Footer from './components/Footer/Footer';
 import axios from 'axios';  
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-pi-videogame-production.up.railway.app/';
 
 function App() {
   
