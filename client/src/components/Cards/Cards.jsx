@@ -13,28 +13,28 @@ export default function Cards(props){
     const games = useSelector((state) => state.games);
     const gamesPerPage = 15;
     const [isLoading, setIsLoading] = useState(true);
+    const [isSearching, setIsSearching] = useState(false);
     const [numPage, setNumPage] = useState(1);
     const [gamesToShow, setGamesToShow] = useState([]);
  
     const totalGames = Math.ceil(games.length / gamesPerPage);
+
     //Cada vez que entro a la pagina de juegos, limpio el array global del juego traido por ID
     cleanGame(dispatch);
 
     //En la primera carga de la pagina, traigo todos los juegos
     useEffect(() => {
         
-        if (games.length === 0){
+        if (games.length === 0 && !isSearching){
 
             dispatch(getGames())
             .finally(() => { setIsLoading(false)});
-           
-            
 
         } else{
             const indexLastGame = numPage * gamesPerPage;
             const indexFirstGame = indexLastGame - gamesPerPage;
             setGamesToShow(games.slice(indexFirstGame, indexLastGame));
-         
+            setIsLoading(false);
         }
         
      
@@ -63,9 +63,10 @@ export default function Cards(props){
     const onSearchHandler = (string) => {
         const aux = string;
         if (string === ' ' || aux.trim() === ''){
+            setIsSearching(false);
             return resetToOriginalGames(dispatch);
         }
-
+        setIsSearching(true);
         searchByName(dispatch, string);
     }
 

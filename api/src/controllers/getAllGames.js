@@ -16,7 +16,7 @@ const getAllGames = async(req, res) => {
         for (let i = 1; i <= 3; i++){
         
             
-            const response = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}&pageSize=${pageSize}`);  
+            const response = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=${i}&page_size=${pageSize}`);  
                 
                 
             allGames = [...allGames, ...response.data.results];
