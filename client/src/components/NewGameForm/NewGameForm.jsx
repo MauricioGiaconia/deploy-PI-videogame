@@ -202,6 +202,12 @@ export default function NewGameForm(props){
 
  
     return <div className={`${styles.formContainer}`}>
+
+        <div className={`${styles.formMessage}`}>
+                {error.error !== '' && submit ? <p className={`${styles.formError}`}>{error.message}</p> : false}
+                {error.error === '' && submit ? <p className={`${styles.formSuccess}`}>Juego cargado con exito!</p> : false}    
+        </div>
+
         <form action='' onSubmit={onSubmit}>
            
             <div className={`${styles.formGroup}`}>
