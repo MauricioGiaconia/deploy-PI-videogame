@@ -79,7 +79,8 @@ export default function NewGameForm(props){
 
         if (newGame.title && newGame.description && newGame.release && validations.img && newGame.rating && newGame.genres.length > 0 && newGame.platforms.length > 0 && newGame.developer && newGame.stores.length > 0){
 
-            dispatch(postNewGame(newGame)).then(()=>{dispatch(getGames()).then(() => isLoading(true)).finally(() => isLoading(false));})
+            isLoading(true);
+            dispatch(postNewGame(newGame)).then(()=>{dispatch(getGames())}).finally(() => isLoading(false))
             setSubmit(true);
             e.target.reset();
 
