@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import { getGenres } from './redux/actions';
 import { useDispatch } from 'react-redux';
 
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-pi-videogame-production.up.railway.app/';
 
 function App() {
   
